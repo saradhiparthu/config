@@ -1,0 +1,10 @@
+spring:
+  cloud:
+    config:
+      server:
+        boostrap: true
+        composite:
+          - type: git
+            uri: https://github.com/saradhiparthu/spring-cloud-config-data
+          - type: file
+            search-locations: file:///pulivarthi/2024/login/config
