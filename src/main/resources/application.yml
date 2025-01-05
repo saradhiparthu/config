@@ -1,8 +1,11 @@
 server:
-  port: 1001
+  port: 8888
 spring:
-   application:
-     name: config
-   profiles:
-    active:
-    - aws-dev
+  application:
+    name: configserver
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/saradhiparthu/login.git
+          searchPaths: config-map
