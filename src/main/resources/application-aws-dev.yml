@@ -1,0 +1,32 @@
+spring:
+  config:
+    activate:
+      on-profile: aws-dev
+  cloud:
+    config:
+      server:
+        git:
+          clone-on-start: true
+          uri: https://github.com/saradhiparthu/config-data.git
+          searchPaths: aws/dev
+          basedir: /opt/app/config-data/
+          default-label: master
+          username:
+          password:
+          repos:
+            login-service:
+              clone-on-start: true
+              uri: https://github.com/saradhiparthu/login.git
+              searchPaths: config-map
+              default-label: master
+              basedir: /opt/app/login/
+              username:
+              password:
+            order-service:
+              clone-on-start: true
+              uri: https://github.com/saradhiparthu/order-service.git
+              searchPaths: config-map
+              default-label: master
+              basedir: /opt/app/login/
+              username:
+              password:
